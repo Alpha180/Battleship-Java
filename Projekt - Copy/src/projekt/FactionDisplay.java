@@ -118,8 +118,6 @@ public class FactionDisplay extends JFrame
             
             selectedFaction.setText(userSelection);
             
-            do
-            {
             //if else axis allies panel
             if (userSelection.equals(factions[0]) || userSelection.equals(factions[2]))
             {
@@ -131,7 +129,6 @@ public class FactionDisplay extends JFrame
                 buildEnemyFactionPanel(allies);
                 add(enemyFactionPanel, BorderLayout.EAST);
             }
-            } while (1>0);
         }
     }
     
