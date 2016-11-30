@@ -9,7 +9,8 @@ public class Battleship
 
     public static void main(String[] args) 
     {
-        new battleshipFrame(); 
+        new shipSelect();
+        //new battleshipFrame(); 
     }
     
 }
