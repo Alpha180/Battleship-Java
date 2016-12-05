@@ -1,5 +1,7 @@
 package battleship;
 
+import java.io.IOException;
+
 /**
  *
  * @author Alexander Artigas
@@ -7,10 +9,11 @@ package battleship;
 public class Battleship 
 {
 
-    public static void main(String[] args) 
+    public static void main(String[] args) throws IOException 
     {
-        new shipSelect();
-        //new battleshipFrame(); 
+
+        new battleshipFrame(); 
+        
     }
     
 }

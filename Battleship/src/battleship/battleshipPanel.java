@@ -26,14 +26,16 @@ public class battleshipPanel extends JPanel
         options = new JButton("Options");
         exit = new JButton("Exit");
 
-        startGame.setSize(100, 50);
-        startGame.setLocation(90, 40);
-        options.setSize(100, 50);
-        options.setLocation(90, 110);
-        exit.setSize(100, 50);
-        exit.setLocation(90, 180);
+        startGame.setSize(100, 50); // Setting size of the button
+        startGame.setLocation(90, 40); // Setting location of the button
+        options.setSize(100, 50); // Setting size of the button
+        options.setLocation(90, 110); // Setting location of the button
+        exit.setSize(100, 50); // Setting size of the button
+        exit.setLocation(90, 180); // Setting location of the button
         
+        options.addActionListener(new option());
         exit.addActionListener(new exit());
+        startGame.addActionListener(new game());
         
         add(startGame);
         add(options);
@@ -51,4 +53,35 @@ public class battleshipPanel extends JPanel
         }
         
     }
+    
+    private class game implements ActionListener
+    {
+        
+        public void actionPerformed(ActionEvent e)
+        {
+            
+            // Creating a new JFrame 
+            
+            shipSelect ship = new shipSelect();
+            ship.setVisible(true);
+            
+        }
+        
+    }
+    
+    private class option implements ActionListener
+    {
+        
+        public void actionPerformed(ActionEvent e)
+        {
+            
+            //Creating a new JFrame 
+            
+            opMenu op = new opMenu();
+            op.setVisible(true);
+            
+        }
+        
+    }
+    
 }
